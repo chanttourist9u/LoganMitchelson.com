@@ -1,1 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logan Mitchelson - Scotland's PowerChair Football Superstar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .logan-hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logan-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+        
+        .logan-hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logan-hero .subtitle {
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logan-hero .dates {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-image-large {
+            margin-top: 40px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .hero-image-large img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .logan-section {
+            padding: 50px 40px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .logan-section:last-of-type {
+            border-bottom: none;
+        }
+        
+        .logan-section h2 {
+            color: #1e3a8a;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #3b82f6;
+        }
+        
+        .logan-section h3 {
+            color: #2563eb;
+            font-size: 1.4em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .logan-section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .logan-img {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin: 20px 0;
+        }
+        
+        .logan-right {
+            float: right;
+            margin: 0 0 20px 30px;
+        }
+        
+        .logan-left {
+            float: left;
+            margin: 0 30px 20px 0;
+        }
+        
+        .logan-quote {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-left: 5px solid #3b82f6;
+            padding: 25px;
+            margin: 25px 0;
+            font-style: italic;
+            color: #1e40af;
+            font-size: 1.1em;
+            border-radius: 8px;
+            quotes: '"' '"';
+        }
+        
+        .logan-quote::before {
+            content: '"';
+            font-size: 3em;
+            opacity: 0.1;
+            position: absolute;
+            margin-left: -20px;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 560px;
+            margin: 30px 0;
+            padding-bottom: 56.25%;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .achievement-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid #3b82f6;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.2);
+        }
+        
+        .achievement-card h4 {
+            color: #1e3a8a;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .achievement-card h4::before {
+            content: '⚽';
+            margin-right: 10px;
+            font-size: 1.4em;
+        }
+        
+        .achievement-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .achievement-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #334155;
+        }
+        
+        .achievement-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 2px solid #fbbf24;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .highlight-box h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+        
+        .legacy-box {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        
+        .legacy-box h2 {
+            color: white;
+            border-bottom: 3px solid #fbbf24;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .legacy-box p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        
+        .immortalized {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 25px;
+        }
+        
+        .immortalized h3 {
+            color: #fbbf24;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+        
+        .immortalized p {
+            font-size: 1.2em;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 50px 40px;
+            text-align: center;
+            border-top: 2px solid #3b82f6;
+        }
+        
+        .cta-section h2 {
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 15px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            padding: 15px 50px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+        }
+        
+        .back-to-shop {
+            padding: 20px 40px;
+            text-align: center;
+            background: #f3f4f6;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .back-to-shop a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .back-to-shop a:hover {
+            color: #2563eb;
+        }
+        
+        .clearfix {
+            clear: both;
+        }
+        
+        @media (max-width: 768px) {
+            .logan-hero {
+                padding: 40px 20px;
+            }
+            
+            .logan-hero h1,
+            .logan-hero .subtitle {
+                font-size: 1.6em;
+            }
+            
+            .logan-section {
+                padding: 30px 20px;
+            }
+            
+            .logan-section h2 {
+                font-size: 1.5em;
+            }
+            
+            .logan-right,
+            .logan-left {
+                float: none;
+                margin: 20px 0;
+            }
+            
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-images {
+                grid-template-columns: 1fr;
+            }
+            
+            .logan-img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logan-hero">
+            <h1 class="subtitle">Scotland's First PowerChair Football Superstar</h1>
+            <h1>Logan Mitchelson</h1>
+            <h1 class="dates">2004 – 2024</h1>
+            
+            <div class="hero-image-large">
+                <img src="https://cdn11.bigcommerce.com/s-bipfywiies/product_images/uploaded_images/img-6375.jpg" alt="Logan Mitchelson" width="400">
+            </div>
+        </div>
 
+        <div class="logan-section">
+            <h2>A Life of Determination and Joy</h2>
+            
+            <p>Logan was a happy and enthusiastic young man living with Duchenne Muscular Dystrophy, a life-shortening, degenerative muscle wasting condition affecting approximately 1 in 3,500 boys. Despite being wheelchair-bound since age 10 and facing countless daily challenges that most take for granted, Logan went through life with a smile and took on every challenge with an unwavering determination to succeed.</p>
+            
+            <p>His gentleness, cheeky nature, and infectious smile touched everyone he met. Logan was the happiest of people, and his greatest joys were family, friends, X-box, and football. His energy and enthusiasm were extraordinary, and he lived each day determined to be the best that he could be.</p>
+            
+            <h3>The Beginning of a Football Journey</h3>
+            
+            <p>In 2015, during a para-sport festival in Dundee, Logan had a taster session in PowerChair Football and was instantly hooked. From that day forward, he challenged himself to improve his skills every single day. The commitment Logan showed was something quite extraordinary, comprising 1 or 2 club training sessions per week, 3 or 4 personal training sessions per week, nightly video analysis, and monthly Scotland training sessions - beyond that of most able-bodied athletes and absolutely remarkable for an individual facing the challenges that a boy living with Duchenne faces each minute of each day.</p>
+        </div>
+
+        <div class="logan-section">
+            <h2>An Unprecedented Football Career</h2>
+            
+            <div class="logan-quote">
+                Logan remains the only Scottish player to have been awarded Man of the Match in any of the FA Cups in any of the football disciplines.
+            </div>
+            
+            <img src="https://cdn11.bigcommerce.com/s-bipfywiies/product_images/uploaded_images/img-6375.jpg" alt="FA Cup Man of the Match" class="logan-img logan-right" width="250">
+            
+            <p>In a short football career spanning less than 7 seasons, Logan became the only Scottish player to have competed in and won the FA Disability Cup Final. He is the only player to have won all the National Leagues and Cups in Great Britain, making him a true legend of the sport.</p>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/DqyRG6du9cc?si=XjIc35i8dD8N2OUe" allowfullscreen=""></iframe>
+            </div>
+
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <h4>Scottish Honours</h4>
+                    <ul>
+                        <li>3 National League titles</li>
+                        <li>2 League Cups</li>
+                        <li>3 Scottish Cups</li>
+                        <li>1 Challenge Cup</li>
+                    </ul>
+                </div>
+
+                <div class="achievement-card">
+                    <h4>English Honours</h4>
+                    <ul>
+                        <li>North East Regional title</li>
+                        <li>West Midlands Regional title</li>
+                        <li>FA Disability Cup winner</li>
+                        <li>FA Disability Cup Man of the Match</li>
+                        <li>National League title</li>
+                    </ul>
+                </div>
+
+                <div class="achievement-card">
+                    <h4>International Honours</h4>
+                    <ul>
+                        <li>30 caps for Scotland</li>
+                        <li>Scored Scotland's first ever International Goal</li>
+                        <li>Qualified Scotland for 2025 Euros</li>
+                        <li>Top Playmaker - 2022 Geneva Cup</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="clearfix"></div>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/q_YZNpBUYg8?si=-oO4j_67LXVQj1EK" allowfullscreen=""></iframe>
+            </div>
+        </div>
+
+        <div class="logan-section">
+            <h2>The Club Journey</h2>
+            
+            <h3>Tayside Dynamos (2015–2019)</h3>
+            <img src="https://cdn11.bigcommerce.com/s-bipfywiies/product_images/uploaded_images/dynamos.png" alt="Tayside Dynamos" class="logan-img logan-left" width="150">
+            
+            <p>Logan started playing with his local club, Tayside Dynamos, and rapidly progressed to become one of their main players. Over 4 seasons, he helped Tayside Dynamos win every title in Scotland. One notable performance was being brought on as a substitute in the final cup game in 2017 to help his team win the game and the cup - remarkable as he was playing just 2 weeks after having ankle surgery and with both legs in plaster casts. PowerChair Football was truly the best pain remedy ever!</p>
+            
+            <h3>Scotland National Team (2018–2024)</h3>
+            <img src="https://cdn11.bigcommerce.com/s-bipfywiies/product_images/uploaded_images/whatsapp-image-2022-05-12-at-8.07.19-am-1-.jpg" alt="Scotland v England" class="logan-img logan-right" width="250">
+            
+            <p>Logan's selection into the Scotland National Squad at its establishment in 2018 was a very proud moment. He quickly became one of Scotland's top players, with his infamous opening goal at the Home Nations Tournament in 2022. He was pivotal to Scotland's qualification for the 2025 Euros with success at the 2022 Geneva Cup tournament, where he was personally awarded top playmaker. Logan played every game since the team's inception and was awarded 30 caps for his country.</p>
+            
+            <h3>Northern Thunder, Newcastle (2019–2023)</h3>
+            <img src="https://cdn11.bigcommerce.com/s-bipfywiies/product_images/uploaded_images/img-6417.jpg" alt="Northern Thunder" class="logan-img logan-left" width="250">
+            
+            <p>Never happy to select the easy path, Logan challenged himself to take his game to its next level. He knew he had to play in England to progress - to play with and against the greatest players in the greatest league in the world. He swapped weekly training sessions just 20 minutes from home for initially 12-hour twice-weekly round trips to Newcastle.</p>
+            
+            <p>Playing alongside England National squad stars, Logan loved being part of the Thunder team and learnt so much. In his first premiership game in Nottingham, he was welcomed by the whole England football community, and the love and support he received continued for the whole of his football career.</p>
+            
+            <div class="highlight-box">
+                <h3>The 2022 FA Disability Cup Final - A Defining Moment</h3>
+                <p>Logan's most prestigious moment came in 2022 when he helped Northern Thunder secure their first ever cup win against the top English team, West Bromwich Albion, in the FA Disability Cup Final televised live on BT Sport.</p>
+                <p>Playing as goalkeeper, Logan made 43 saves in 50 minutes. When the match went to penalties, he saved 3 from 4 to bring the cup home. He was named Man of the Match.</p>
+            </div>
+            
+            <div class="clearfix"></div>
+            
+            <h3>West Bromwich Albion (2023–2024)</h3>
+            <img src="https://cdn11.bigcommerce.com/s-bipfywiies/product_images/uploaded_images/image.jpg" alt="West Bromwich Albion" class="logan-img logan-right" width="250">
+            
+            <p>In 2023, Logan tried out for West Bromwich Albion and was thrilled when asked to join one of the greatest PowerChair Football teams in the world.</p>
+            
+            <h3>Final Scotland Tournament</h3>
+            <img src="https://cdn11.bigcommerce.com/s-bipfywiies/product_images/uploaded_images/img-2739.jpg" alt="Final Scotland Tournament" class="logan-img logan-left" width="250">
+            
+            <p>Logan's last Scotland tournament was in Largs in March 2024, where he faced many of his current and former teammates and friends from England. During the match he received a red card and so was eliminated from the remainder of the tournament. Scotland was due to play England again and such was the love and admiration for Logan from his English team-mates that they appealed each and every one of them to allow Logan to play in the final. Logan was as Scottish as you could get yet the English PowerChair football community had adopted him as one of their own.</p>
+        </div>
+
+        <div class="legacy-box">
+            <h2>Logan's Everlasting Legacy</h2>
+            
+            <p>The Celebration of Logan's life was attended by his Scotland team-mates, coaches and management team, players from each Scottish club, his WBA team-mates and players from other English teams including the English manager, 5 English National team players and one from Argentina.</p>
+            
+            <div class="immortalized">
+                <h3>Forever Part of PowerChair Football</h3>
+                <p><strong>Scotland #2 | West Bromwich Albion #7</strong></p>
+                <p>His name and number live on in PowerChair forever.</p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Continue Logan's Legacy</h2>
+            <p>To further continue his legacy, we have commissioned a new edition of Logan's Bear. Help us keep Logan's memory and passion alive.</p>
+            <a href="https://www.toeandheelgold.com/logans-fundraiser-bear/" class="cta-button">🧸 Purchase Logan's Bear</a>
+        </div>
+
+        <div class="back-to-shop">
+            <p><a href="https://www.toeandheelgold.com/">← Back to toeandheelGOLD Store</a></p>
+        </div>
+    </div>
+</body>
+</html>
